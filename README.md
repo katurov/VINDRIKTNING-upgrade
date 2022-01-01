@@ -15,7 +15,7 @@
 
 ## The driver and the signature
 
-The original driver from Adafruit looking for sequence ```16 0d 02``` as first three bytes, but VINDRIKTNING sends ```16 11 0B``` instead. As we can see in the community [e.g. here](https://issueexplorer.com/issue/arendst/Tasmota/13012) it isn't a big deal, just keep in mind that values of pm1.0 and pm10 are probably dummy.
+The original driver from Adafruit looking for sequence ```16 0d 02``` as first three bytes of [the signature from the documentation](https://en.gassensor.com.cn/Product_files/Specifications/LED%20Particle%20Sensor%20PM1006K%20Specification.pdf), but VINDRIKTNING sends ```16 11 0B``` instead. As we can see in the community [e.g. here](https://issueexplorer.com/issue/arendst/Tasmota/13012) it isn't a big deal, just keep in mind that values of pm1.0 and pm10 are probably dummy.
 
 ## The usage
 
