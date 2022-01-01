@@ -23,13 +23,11 @@ uint16_t pm25     = 0;
 
 
 /*
-   INIT
-      IKEA VINDRIKTNING have serial on 9600 bod
-      WIRING
-          REST - TX of sensor
-          5v   - VCC 5V
-          GND  - Ground
-*/
+ * IKEA VINDRIKTNING have serial on 9600 bod
+ *
+ * Open Serial port for VINDRIKTNING
+ * Open WiFi connection
+ */
 void setup() {
   Serial.begin( 9600 );
 
@@ -39,7 +37,9 @@ void setup() {
   }
 }
 
-
+/*
+ * SENDING values to server in one JSON
+ */
 void sendValuesToServer () {
   if ((WiFi.status() == WL_CONNECTED)) {
 
@@ -83,4 +83,5 @@ void loop() {
       sendValuesToServer ();
     }
   }
+  delay (50);
 }
