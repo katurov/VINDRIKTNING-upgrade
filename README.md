@@ -23,4 +23,4 @@ The original driver from Adafruit looking for sequence ```16 0d 02``` as first t
 2. Fetch 20 bytes and read the signature
 3. Get bytes 5 & 6 (counting from 0) witch are DF3 DF4
 4. Calculate by formula PM2.5 = DF3 * 256 + DF4
-5. Send values over HTTP
+5. Send values: over http (for "arduino" version) or ESPNow protocol (for "espnow" version)
